@@ -1,55 +1,85 @@
 # 👋 Hi, I'm Pratyush Kumar Chaubey
 
-### BCA Student | Web Developer | AI & Data Analytics Enthusiast
+### BCA Student • Web Developer • AI & Data Analytics Enthusiast
 
-I am a BCA student interested in building practical software, web applications, and technology-driven solutions. I enjoy learning new technologies, working on real-world projects, and continuously improving my development skills.
+I’m a BCA student focused on **web development, software development, artificial intelligence, and data analytics**. I enjoy turning ideas into practical projects, learning modern technologies, and building solutions that solve real-world problems.
+
+> **Build. Learn. Improve. Repeat.**
 
 ---
 
 ## 🚀 About Me
 
-- 🎓 BCA Student
-- 💻 Interested in Web Development and Software Development
-- 🤖 Exploring Artificial Intelligence and AI tools
-- 📊 Learning Data Analytics
-- 🌱 Improving my programming and problem-solving skills
-- ⚡ Interested in turning ideas into practical projects
+- 🎓 BCA student at **Krishna College Of Education And Management**
+- 💻 Interested in **Web Development & Software Development**
+- 🤖 Exploring **Artificial Intelligence and AI-powered applications**
+- 📊 Learning **Data Analytics and data-driven problem solving**
+- 🧠 Improving **programming, logical thinking, and problem-solving**
+- 🌱 Continuously learning modern development tools and technologies
+- ⚡ Interested in building **practical, real-world projects**
 
 ---
 
-## 🛠️ Skills & Technologies
+## 🧰 Technical Skills
 
-**Programming:** C • Java • Python
+### Programming
+`C` `Java` `Python`
 
-**Web Development:** HTML • CSS • JavaScript • React • Tailwind CSS • WordPress
+### Web Development
+`HTML` `CSS` `JavaScript` `React` `Tailwind CSS` `WordPress`
 
-**Other Areas:** Artificial Intelligence • Data Analytics • Database Management • Software Development
+### AI & Data
+`Artificial Intelligence` `AI Tools` `Data Analytics` `Database Management`
 
-**Tools:** Git • GitHub • VS Code
+### Tools
+`Git` `GitHub` `VS Code`
 
 ---
 
-## 📌 Featured Projects
+## ⭐ Featured Projects
 
-### ⚡ Baba Electricals — Live WordPress Website
+### 🤖 KrishiMind AI — AI-Powered Crop Disease Detection
 
-A professional live business website developed for **Baba Electricals**, an electrical and electronics service business based in Deoria, Uttar Pradesh.
+An AI-focused web application designed to help identify crop diseases from plant images.
+
+**Tech Stack:** React • Vite • Tailwind CSS • Flask • Python • TensorFlow • Firebase
+
+**Key Features:**
+- 🌱 Crop image scanning
+- 🔬 AI-based disease prediction
+- 📈 Prediction confidence score
+- 🔐 Firebase authentication
+- 🖥️ React-based web interface
+- ⚙️ Flask backend for model inference
+
+🔗 **[Live Demo](https://prtshkmrchaubey-blip.github.io/krishimind-ai/)**  
+🔗 **[View Source Code](https://github.com/prtshkmrchaubey-blip/krishimind-ai)**
+
+---
+
+### ⚡ Baba Electricals — Live Business Website
+
+A professional business website created for **Baba Electricals**, an electrical and electronics service business based in Deoria, Uttar Pradesh.
 
 **Platform:** WordPress  
 **Project Type:** Live Business Website  
-**Focus:** Business Website • Responsive Design • Services • Products • Customer Contact
+**Focus:** Business Presentation • Services • Products • Responsive Design • Customer Contact
 
 🌐 **[View Live Website](https://babaelectricals.unaux.com)**
 
-> This is a live WordPress project created for a real business and is presented here as part of my practical web development portfolio.
+> This project gave me practical exposure to creating a website around real business requirements and presenting services and products in a professional way.
 
-### 🤖 AI Projects
+---
 
-Exploring practical applications of Artificial Intelligence and AI-powered tools.
+## 💡 What I’m Interested In
 
-### 📊 Data Analytics Projects
-
-Working with data to understand information, find useful insights, and present results clearly.
+| Area | Focus |
+|---|---|
+| 🌐 Web Development | Modern, responsive and user-focused websites |
+| 🤖 Artificial Intelligence | AI applications and practical AI tools |
+| 📊 Data Analytics | Understanding data and finding useful insights |
+| 💻 Software Development | Building practical software solutions |
+| 🗄️ Databases | Data organization and management |
 
 ---
 
@@ -58,25 +88,69 @@ Working with data to understand information, find useful insights, and present r
 - Advanced Web Development
 - Artificial Intelligence
 - Data Analytics
+- Python Development
 - Git & GitHub
 - Software Development Practices
+- Better problem-solving and project-building skills
 
 ---
 
-## 🎯 Goals
+## 🎓 Education
 
-- Build strong real-world projects
-- Improve programming and development skills
-- Create a professional project portfolio
-- Learn modern AI and data technologies
-- Contribute to open-source projects
+**Bachelor of Computer Applications (BCA)**  
+Krishna College Of Education And Management
 
----
+**Class 12 — 2024**  
+Jawahar Navodaya Vidyalaya, East Garo Hills, Meghalaya
 
-## 📫 Connect With Me
-
-**GitHub:** [@prtshkmrchaubey-blip](https://github.com/prtshkmrchaubey-blip)
+**Class 10 — 2022**  
+Jawahar Navodaya Vidyalaya, East Garo Hills, Meghalaya
 
 ---
 
-⭐ Thanks for visiting my profile!
+## 🎯 My Career Goals
+
+I’m working toward becoming a strong technology professional by:
+
+- Building more real-world projects
+- Strengthening programming fundamentals
+- Developing practical AI applications
+- Improving data analytics skills
+- Learning industry-standard development practices
+- Contributing to meaningful projects and open source
+- Continuously improving through hands-on learning
+
+---
+
+## 📊 GitHub Activity
+
+I use GitHub to **build, document, manage, and showcase my projects** while improving my development workflow and version-control skills.
+
+🔗 **[Visit My GitHub Profile](https://github.com/prtshkmrchaubey-blip)**
+
+---
+
+## 🌐 Portfolio
+
+💼 **[View My Portfolio](https://prtshkmrchaubey-blip.github.io/pratyush-portfolio/)**
+
+My portfolio contains my projects, technical skills, education, and development journey.
+
+---
+
+## 📫 Let's Connect
+
+- 💻 **GitHub:** [@prtshkmrchaubey-blip](https://github.com/prtshkmrchaubey-blip)
+- 🌐 **Portfolio:** [pratyush-portfolio](https://prtshkmrchaubey-blip.github.io/pratyush-portfolio/)
+
+---
+
+### ⚡ A Little About My Approach
+
+I believe the best way to learn technology is to **build real projects**. Every project is an opportunity to understand a problem, explore a solution, learn from mistakes, and improve the final result.
+
+---
+
+⭐ **Thanks for visiting my profile!**
+
+If you find my projects interesting, feel free to explore the repositories and follow my journey.
