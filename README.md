@@ -5,6 +5,8 @@ Area | Focus |
 
 I’m a BCA student focused on **web development, software development, artificial intelligence, and data analytics**. I enjoy turning ideas into practical projects, learning modern technologies, and building solutions that solve real-world problems.
 
+Currently, I'm strengthening my skills in **Python, Web Development, Artificial Intelligence, and Data Analytics**, while preparing to begin my professional journey in the IT industry.
+
 > **Build. Learn. Improve. Repeat.**
 
 ---
@@ -32,8 +34,19 @@ I’m a BCA student focused on **web development, software development, artifici
 ### AI & Data
 `Artificial Intelligence` `AI Tools` `Data Analytics` `Database Management`
 
-### Tools
-`Git` `GitHub` `VS Code`
+### ### Tools & Technologies
+
+* Git & GitHub
+* Visual Studio Code
+* Responsive Web Design
+
+### Areas of Interest
+
+* Artificial Intelligence
+* Data Analytics
+* Software Development
+* Full-Stack Web Development
+
 
 ---
 
@@ -151,33 +164,11 @@ I believe the best way to learn technology is to **build real projects**. Every 
 
 ---
 
-⭐ **Thanks for visiting my profile!**
-# 👋 Hi, I'm Pratyush Kumar Chaubey
+⭐ **Thanks for visiting my profile! Feel free to explore my repositories and follow my journey as I build, learn, and grow as a developer.*
 
-### BCA Student | Aspiring Software Developer | Web Development & AI Enthusiast
-
-I'm a BCA student passionate about building practical software applications, responsive websites, and technology-driven solutions. I enjoy solving problems through code, exploring modern technologies, and turning ideas into real-world projects.
-
-Currently, I'm strengthening my skills in **Python, Web Development, Artificial Intelligence, and Data Analytics**, while preparing to begin my professional journey in the IT industry.
-
----
+If you find my projects interesting, feel free to explore the repositories and follow my journey.
 
 
----
-
-
-### Tools & Technologies
-
-* Git & GitHub
-* Visual Studio Code
-* Responsive Web Design
-
-### Areas of Interest
-
-* Artificial Intelligence
-* Data Analytics
-* Software Development
-* Full-Stack Web Development
 
 ---
 
@@ -194,6 +185,3 @@ Currently, I'm strengthening my skills in **Python, Web Development, Artificial 
 
 ---
 
-⭐ *Thanks for visiting my profile! Feel free to explore my repositories and follow my journey as I build, learn, and grow as a developer.*
-
-If you find my projects interesting, feel free to explore the repositories and follow my journey.
