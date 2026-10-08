@@ -21,7 +21,7 @@ I am a BCA student interested in building practical software, web applications, 
 
 **Programming:** C • C++ • Java • Python
 
-**Web Development:** HTML • CSS • JavaScript • React • Tailwind CSS
+**Web Development:** HTML • CSS • JavaScript • React • Tailwind CSS • WordPress
 
 **Other Areas:** Artificial Intelligence • Data Analytics • Database Management • Software Development
 
@@ -31,15 +31,24 @@ I am a BCA student interested in building practical software, web applications, 
 
 ## 📌 Featured Projects
 
-### ⚡ Baba Electricals Web Application
-A professional web application developed for an electrical and electronics service business.
+### ⚡ Baba Electricals — Live WordPress Website
 
-**Focus:** Web Development • Responsive Design • Business Website
+A professional live business website developed for **Baba Electricals**, an electrical and electronics service business based in Deoria, Uttar Pradesh.
+
+**Platform:** WordPress  
+**Project Type:** Live Business Website  
+**Focus:** Business Website • Responsive Design • Services • Products • Customer Contact
+
+🌐 **[View Live Website](https://babaelectricals.unaux.com)**
+
+> This is a live WordPress project created for a real business and is presented here as part of my practical web development portfolio.
 
 ### 🤖 AI Projects
+
 Exploring practical applications of Artificial Intelligence and AI-powered tools.
 
 ### 📊 Data Analytics Projects
+
 Working with data to understand information, find useful insights, and present results clearly.
 
 ---
