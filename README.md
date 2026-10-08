@@ -19,7 +19,7 @@ I am a BCA student interested in building practical software, web applications, 
 
 ## 🛠️ Skills & Technologies
 
-**Programming:** C • C++ • Java • Python
+**Programming:** C • Java • Python
 
 **Web Development:** HTML • CSS • JavaScript • React • Tailwind CSS • WordPress
 
