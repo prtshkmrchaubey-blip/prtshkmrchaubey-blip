@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pratyush AI — Personal Assistant</title>
+<style>
+:root{--bg:#f5f8fc;--card:#fff;--text:#172033;--muted:#667085;--accent:#2563eb;--border:#dbe4f0}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#f5f8fc,#eef4ff);color:var(--text);min-height:100vh}
+.wrap{max-width:900px;margin:0 auto;padding:32px 18px}.card{background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 18px 50px rgba(31,55,88,.12)}
+header{padding:24px 26px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.brand{display:flex;gap:14px;align-items:center}.avatar{width:48px;height:48px;border-radius:50%;background:#2563eb;color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+h1{font-size:20px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px}.status{font-size:12px;color:#15803d;background:#ecfdf3;padding:7px 10px;border-radius:999px;white-space:nowrap}
+.chat{height:58vh;min-height:420px;max-height:650px;padding:24px;overflow:auto;background:#f8fafc}
+.msg{max-width:78%;margin:0 0 16px;padding:13px 15px;border-radius:17px;line-height:1.5;font-size:14px;white-space:pre-wrap}
+.bot{background:#fff;border:1px solid var(--border);border-top-left-radius:6px}.user{margin-left:auto;background:#2563eb;color:#fff;border-top-right-radius:6px}
+.composer{display:flex;gap:10px;padding:18px;border-top:1px solid var(--border);background:#fff}.composer input{flex:1;border:1px solid var(--border);border-radius:14px;padding:13px 15px;font-size:14px;outline:none}.composer input:focus{border-color:#2563eb}.composer button{border:0;background:#2563eb;color:#fff;border-radius:14px;padding:0 20px;font-weight:700;cursor:pointer}.composer button:disabled{opacity:.55;cursor:not-allowed}
+.tools{padding:14px 18px;background:#fff;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--border);background:#f8fafc;border-radius:999px;padding:8px 12px;font-size:12px;cursor:pointer}.chip:hover{border-color:#2563eb}
+.setup{margin-top:14px;padding:14px 16px;border:1px dashed var(--border);border-radius:16px;background:#fff;color:var(--muted);font-size:12px}.setup code{font-family:monospace}.key{display:flex;gap:8px;margin-top:9px}.key input{flex:1;padding:10px;border:1px solid var(--border);border-radius:10px}.key button{padding:10px 12px;border:0;border-radius:10px;background:#172033;color:#fff}
+a{color:#2563eb;text-decoration:none}@media(max-width:600px){header{padding:18px}.chat{height:60vh;padding:16px}.msg{max-width:88%}.composer{padding:12px}.composer button{padding:0 15px}.status{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<header>
+<div class="brand"><div class="avatar">PK</div><div><h1>Pratyush AI</h1><div class="sub">Personal portfolio & project assistant</div></div></div>
+<div class="status" id="status">Ready</div>
+</header>
+<div class="chat" id="chat"></div>
+<div class="tools">
+<button class="chip" data-q="Tell me about Pratyush.">About Pratyush</button>
+<button class="chip" data-q="What projects has Pratyush built?">Projects</button>
+<button class="chip" data-q="What are Pratyush's technical skills?">Skills</button>
+<button class="chip" data-q="What is Pratyush learning now?">Currently learning</button>
+</div>
+<div class="composer"><input id="input" placeholder="Ask something about Pratyush..." autocomplete="off"><button id="send">Send</button></div>
+</div>
+<div class="setup">
+<strong>AI connection:</strong> This page keeps the API key out of the GitHub repository. For live AI replies, enter your own authorized Pollinations secret key below. The key is stored only in this browser.
+<div class="key"><input id="key" type="password" placeholder="sk_..."><button id="save">Save key</button></div>
+<div style="margin-top:8px">Without a key, the assistant still answers common portfolio questions from the built-in profile context.</div>
+</div>
+</div>
+<script>
+const PROFILE = `You are Pratyush AI, the personal portfolio assistant for Pratyush Kumar Chaubey.
+Answer questions about Pratyush using only this profile context unless the user asks a general technical question.
+Profile: BCA student at Krishna College Of Education And Management. Interests: web development, software development, artificial intelligence, AI applications and data analytics.
+Skills: C, Java, Python, HTML, CSS, JavaScript, React, Tailwind CSS, WordPress, Git, GitHub, VS Code, AI tools, data analytics, database management.
+Projects: KrishiMind AI, an AI-focused crop disease detection web application using React, Vite, Tailwind CSS, Flask, Python, TensorFlow and Firebase; Baba Electricals, a live WordPress business website.
+Education: BCA at Krishna College Of Education And Management; Class 12 in 2024 and Class 10 in 2022 from Jawahar Navodaya Vidyalaya, East Garo Hills, Meghalaya.
+Portfolio: https://prtshkmrchaubey-blip.github.io/pratyush-portfolio/
+GitHub: https://github.com/prtshkmrchaubey-blip
+LinkedIn: https://www.linkedin.com/in/pratyush-kumar-chaubey-97b3513b6
+Keep answers concise, friendly and professional. Do not invent personal facts.`;
+
+const chat=document.getElementById('chat'), input=document.getElementById('input'), send=document.getElementById('send'), statusEl=document.getElementById('status'), keyInput=document.getElementById('key');
+let key=localStorage.getItem('pollinations_key')||'';
+keyInput.value=key;
+function add(text,who){const d=document.createElement('div');d.className='msg '+who;d.textContent=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
+add("Hi! I'm Pratyush AI. Ask me about Pratyush's skills, projects, education or current learning.",'bot');
+function localAnswer(q){
+ const s=q.toLowerCase();
+ if(s.includes('project')) return "Pratyush's featured projects are KrishiMind AI, an AI-powered crop disease detection web app, and Baba Electricals, a live WordPress business website.";
+ if(s.includes('skill')||s.includes('technology')) return "His skills include C, Java, Python, HTML, CSS, JavaScript, React, Tailwind CSS, WordPress, Git, GitHub, VS Code, AI tools, data analytics and database management.";
+ if(s.includes('education')||s.includes('college')) return "Pratyush is pursuing BCA at Krishna College Of Education And Management. He completed Class 12 in 2024 and Class 10 in 2022 at Jawahar Navodaya Vidyalaya, East Garo Hills, Meghalaya.";
+ if(s.includes('learn')||s.includes('learning')) return "He is currently learning advanced web development, AI, data analytics, Python development, Git/GitHub and software development practices.";
+ if(s.includes('about')||s.includes('who is')) return "Pratyush Kumar Chaubey is a BCA student, web developer and AI & data analytics enthusiast focused on building practical projects.";
+ return "I can answer questions about Pratyush's profile, skills, projects, education and learning journey. Try asking one of those.";
+}
+async function aiAnswer(q){
+ if(!key) return localAnswer(q);
+ const r=await fetch('https://gen.pollinations.ai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},body:JSON.stringify({model:'openai/gpt-5-nano',messages:[{role:'system',content:PROFILE},{role:'user',content:q}],temperature:.4,max_tokens:300})});
+ if(!r.ok) throw new Error('AI request failed ('+r.status+')');
+ const data=await r.json();return data.choices?.[0]?.message?.content||'No response received.';
+}
+async function ask(q){
+ if(!q.trim())return;add(q,'user');input.value='';send.disabled=true;statusEl.textContent='Thinking…';
+ try{add(await aiAnswer(q),'bot');statusEl.textContent=key?'AI online':'Local mode'}catch(e){add('AI connection failed. Check your saved key, then try again.\n\n'+localAnswer(q),'bot');statusEl.textContent='Local mode'}finally{send.disabled=false;input.focus()}
+}
+send.onclick=()=>ask(input.value);input.addEventListener('keydown',e=>{if(e.key==='Enter')ask(input.value)});
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>ask(b.dataset.q));
+document.getElementById('save').onclick=()=>{key=keyInput.value.trim();if(key)localStorage.setItem('pollinations_key',key);else localStorage.removeItem('pollinations_key');statusEl.textContent=key?'AI online':'Local mode';};
+statusEl.textContent=key?'AI online':'Local mode';
+</script>
+</body>
+</html>
