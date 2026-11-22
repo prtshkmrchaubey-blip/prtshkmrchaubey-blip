@@ -1,26 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pratyush Kumar Chaubey | AI Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pratyush Kumar Chaubey | Interactive Profile</title>
+<meta name="description" content="Interactive profile of Pratyush Kumar Chaubey — BCA student, web developer and AI & Data Analytics enthusiast.">
 <style>
-body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f8fc;color:#172033}
-main{max-width:1050px;margin:auto;padding:48px 20px}.hero{background:#fff;border:1px solid #dbe4f0;border-radius:26px;padding:34px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;box-shadow:0 18px 50px rgba(31,55,88,.1)}
-.badge{display:inline-block;background:#eaf2ff;color:#2563eb;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}
-h1{font-size:42px;margin:16px 0 8px}p{color:#667085;line-height:1.7}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.links a{padding:11px 15px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;font-size:13px}.links a.secondary{background:#eef2f7;color:#172033}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:#f8fafc;border:1px solid #dbe4f0;border-radius:18px;padding:18px}.stat b{font-size:24px;display:block}.stat span{color:#667085;font-size:12px}
-section{margin-top:24px;background:#fff;border:1px solid #dbe4f0;border-radius:26px;padding:18px}.section-head{padding:6px 10px 16px}h2{margin:0;font-size:22px}.chat{width:100%;height:700px;border:0;border-radius:18px}
-@media(max-width:760px){.hero{grid-template-columns:1fr}h1{font-size:34px}.chat{height:650px}}
+:root{--bg:#f4f8fc;--card:rgba(255,255,255,.82);--line:#dbe6f2;--text:#172033;--muted:#667085;--blue:#2563eb;--blue2:#0ea5e9;--shadow:0 22px 70px rgba(31,55,88,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 10% 10%,#e9f2ff 0,transparent 30%),radial-gradient(circle at 90% 20%,#e8f8ff 0,transparent 28%),var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(37,99,235,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.035) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(to bottom,black,transparent 80%);z-index:-1}
+nav{position:sticky;top:14px;z-index:10;max-width:1120px;margin:14px auto 0;padding:0 18px}.navin{background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:18px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 12px 40px rgba(31,55,88,.08)}.brand{font-weight:900}.brand span{color:var(--blue)}.navlinks{display:flex;gap:8px}.navlinks a{padding:8px 11px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:13px;font-weight:700}.navlinks a:hover{background:#eef4ff;color:var(--blue)}
+main{max-width:1120px;margin:auto;padding:36px 18px 80px}.hero{position:relative;overflow:hidden;background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:32px;padding:38px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;box-shadow:var(--shadow)}
+.orb{position:absolute;width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,#bfdbfe,#dbeafe);right:-130px;top:-150px;opacity:.65;filter:blur(2px)}
+.profile{display:flex;gap:24px;align-items:center;position:relative}.photo{width:142px;height:142px;border-radius:32px;object-fit:cover;border:5px solid white;box-shadow:0 16px 35px rgba(37,99,235,.18);background:#eaf2ff}.photo:hover{transform:translateY(-5px) rotate(1deg);transition:.35s}
+.badge{display:inline-flex;gap:7px;align-items:center;background:#eaf2ff;color:var(--blue);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800}.dot{width:7px;height:7px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 5px #dcfce7}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.03;margin:14px 0 8px;letter-spacing:-1.8px}.role{font-size:16px;font-weight:800;color:var(--blue)}p{color:var(--muted);line-height:1.75}.hero-copy{max-width:620px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{padding:12px 16px;border-radius:13px;background:var(--blue);color:white;text-decoration:none;font-weight:800;font-size:13px;box-shadow:0 10px 24px rgba(37,99,235,.2)}.btn.alt{background:#eef2f7;color:var(--text);box-shadow:none}
+.live{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:center;position:relative}.metric{padding:18px;border:1px solid var(--line);background:rgba(248,250,252,.82);border-radius:20px}.metric b{font-size:28px;display:block}.metric span{font-size:12px;color:var(--muted);font-weight:700}.pulse{animation:pulse 2.5s infinite}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.15)}50%{box-shadow:0 0 0 12px rgba(37,99,235,0)}}
+section{margin-top:24px;background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 15px 50px rgba(31,55,88,.07)}.section-title{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:18px}.section-title h2{margin:0;font-size:24px}.section-title small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{padding:20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.72);transition:.25s}.card:hover{transform:translateY(-6px);border-color:#b8cff5;box-shadow:0 14px 32px rgba(37,99,235,.09)}.card h3{margin:8px 0}.icon{font-size:28px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tag{font-size:11px;font-weight:800;padding:6px 9px;background:#edf4ff;color:#315ea8;border-radius:999px}
+.progress{height:8px;background:#e8eef6;border-radius:999px;overflow:hidden;margin-top:14px}.progress i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--blue),var(--blue2));border-radius:inherit}
+#clock{font-weight:800;color:var(--blue)}footer{text-align:center;color:var(--muted);padding:28px 10px;font-size:13px}.top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 12px 30px rgba(37,99,235,.25)}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:25px}.profile{align-items:flex-start}.photo{width:105px;height:105px}.grid{grid-template-columns:1fr 1fr}.navlinks a:nth-child(-n+2){display:none}}
+@media(max-width:560px){main{padding:22px 12px 60px}.profile{flex-direction:column}.hero{border-radius:24px}.grid,.live{grid-template-columns:1fr}.section-title{display:block}.photo{width:120px;height:120px}}
 </style>
 </head>
 <body>
+<nav><div class="navin"><div class="brand">Pratyush<span>.dev</span></div><div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#ai">AI Chat</a></div></div></nav>
 <main>
-<div class="hero">
-<div><span class="badge">AI • WEB • DATA</span><h1>Pratyush Kumar Chaubey</h1><p>BCA student, web developer and AI & Data Analytics enthusiast. I build practical projects and explore modern technologies.</p>
-<div class="links"><a href="https://github.com/prtshkmrchaubey-blip">GitHub</a><a class="secondary" href="https://prtshkmrchaubey-blip.github.io/pratyush-portfolio/">Portfolio</a><a class="secondary" href="https://www.linkedin.com/in/pratyush-kumar-chaubey-97b3513b6">LinkedIn</a></div></div>
-<div class="stats"><div class="stat"><b>2+</b><span>Featured projects</span></div><div class="stat"><b>10+</b><span>Core technologies</span></div><div class="stat"><b>AI</b><span>Current focus</span></div><div class="stat"><b>BCA</b><span>Education</span></div></div>
+<section class="hero" id="about">
+<div class="orb"></div>
+<div class="hero-copy">
+<div class="profile">
+<img class="photo" src="https://github.com/prtshkmrchaubey-blip.png" alt="Pratyush Kumar Chaubey profile photo">
+<div><span class="badge"><span class="dot"></span> Available for learning & projects</span><h1>Pratyush Kumar Chaubey</h1><div class="role">BCA Student • Web Developer • AI & Data Analytics</div></div>
 </div>
-<section><div class="section-head"><h2>🤖 Ask Pratyush AI</h2><p style="margin:7px 0 0">Ask about my skills, projects, education or learning journey.</p></div><iframe class="chat" src="chatbot/"></iframe></section>
+<p>I build practical web projects, explore AI-powered applications and keep improving my software development and data analytics skills.</p>
+<div class="actions"><a class="btn" href="https://prtshkmrchaubey-blip.github.io/pratyush-portfolio/">View Portfolio</a><a class="btn alt" href="https://github.com/prtshkmrchaubey-blip">GitHub Profile</a><a class="btn alt" href="#ai">Ask My AI</a></div>
+</div>
+<div class="live">
+<div class="metric pulse"><b id="views">Live</b><span>Interactive profile</span></div>
+<div class="metric"><b id="clock">--:--</b><span>Local time</span></div>
+<div class="metric"><b>2+</b><span>Featured projects</span></div>
+<div class="metric"><b>10+</b><span>Technologies</span></div>
+</div>
+</section>
+
+<section id="skills"><div class="section-title"><h2>⚡ Skills & Focus</h2><small>Growing continuously</small></div><div class="grid">
+<div class="card"><div class="icon">💻</div><h3>Web Development</h3><p>Modern front-end and practical website development.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">WordPress</span></div><div class="progress"><i style="--w:82%"></i></div></div>
+<div class="card"><div class="icon">🤖</div><h3>AI & Data</h3><p>Exploring AI applications, analytics and data-driven solutions.</p><div class="tags"><span class="tag">AI</span><span class="tag">Python</span><span class="tag">Data Analytics</span><span class="tag">DBMS</span></div><div class="progress"><i style="--w:72%"></i></div></div>
+<div class="card"><div class="icon">🛠️</div><h3>Programming & Tools</h3><p>Building fundamentals and improving development workflow.</p><div class="tags"><span class="tag">C</span><span class="tag">Java</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span></div><div class="progress"><i style="--w:78%"></i></div></div>
+</div></section>
+
+<section id="projects"><div class="section-title"><h2>🚀 Featured Projects</h2><small>Real project work</small></div><div class="grid">
+<div class="card"><div class="icon">🌱</div><h3>KrishiMind AI</h3><p>AI-focused crop disease detection web application using a modern web stack and ML backend.</p><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Python</span><span class="tag">Flask</span></div><div class="actions"><a class="btn" href="https://prtshkmrchaubey-blip.github.io/krishimind-ai/">Live Demo</a></div></div>
+<div class="card"><div class="icon">⚡</div><h3>Baba Electricals</h3><p>Professional business website for an electrical and electronics service business.</p><div class="tags"><span class="tag">WordPress</span><span class="tag">Business Website</span><span class="tag">Responsive</span></div><div class="actions"><a class="btn" href="https://babaelectricals.unaux.com">Live Website</a></div></div>
+<div class="card"><div class="icon">🤖</div><h3>Personal AI Profile</h3><p>This interactive profile with an AI chatbox, responsive UI and live browser features.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">AI</span></div><div class="actions"><a class="btn" href="chatbot/">Open AI Chat</a></div></div>
+</div></section>
+
+<section id="ai"><div class="section-title"><h2>🤖 Ask Pratyush AI</h2><small>Ask about skills, projects, education or learning</small></div><iframe src="chatbot/" title="Pratyush AI Chatbox" style="width:100%;height:700px;border:0;border-radius:20px;background:#fff"></iframe></section>
+<footer>© <span id="year"></span> Pratyush Kumar Chaubey • Built with curiosity, code and AI.</footer>
 </main>
+<button class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const clock=document.getElementById('clock');
+function tick(){clock.textContent=new Intl.DateTimeFormat('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(new Date())}
+tick();setInterval(tick,1000);
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
